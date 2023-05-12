@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="icon" href="assets/circle-cropped.png">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRTheatre - Virtual Reality</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="scripts/index.js"></script>
+</head>
+<body>
+        <a-scene>
+        <a-assets>
+            <a-asset-item id="chair-o" src="assets/table (1).obj"></a-asset-item>
+            <a-asset-item id="chair-m" src="assets/table (1).mtl"></a-asset-item>
+
+            <a-asset-item id="door-o" src="assets/3d-model.obj"></a-asset-item>
+            <a-asset-item id="door-m" src="assets/3d-model.mtl"></a-asset-item>
+
+            <video id="main_video" src="assets/Cinematic_video3.mp4" loop="true"></video>
+            
+            <img id="play" src="assets/play_button.png">
+            <img id="pause" src="assets/pause_button.png">
+
+            <img id="exit_way" src="assets/exit_glow.png">
+
+        </a-assets>
+
+        <a-sky color="#000000"></a-sky>
+        
+        <!-- Entity | Camera positioned and cursor: black -->
+
+        <a-entity position="-0.49286 5.18282 -4.51588">
+            <a-camera camera="" 
+                    position="1.2552 2.64243 5.41843" 
+                    rotation="-3.552338329811102 20.3972975066573 0" 
+                    look-controls="" 
+                    wasd-controls="" 
+                    data-aframe-inspector-original-camera="">
+
+                <a-cursor material="color:#d0d0d0" raycaster="" cursor="" geometry=""> 
+            </a-cursor>
+
+            </a-camera>
+        </a-entity>
+
+        <!-- Entity | For Main chairs (saled and positioned),lights from below -->
+
+        <a-entity obj-model="obj: #chair-o; mtl: #chair-m" 
+                position="0 0.59096 0" 
+                rotation="0 180 0" 
+                light= "color: #de2612; 
+                        intensity: 1.45; 
+                        type: point">
+
+            <!-- Entity | For the suttle light above the observers head -->
+
+            <a-entity position="-0.32885 11.63805 -2.30736" 
+                    rotation="-84.0087907954667 0 0" 
+                    light= "color: #de2612; 
+                            intensity: 7.45; 
+                            penumbra: 1; 
+                            type: spot">
+            </a-entity>
+
+        </a-entity>
+
+        <!-- ----------------------below Main Chair------------------------------------ -->
+
+        <!-- Entity | For chairs (saled and positioned),lights from below -->
+
+        <a-entity obj-model="obj: #chair-o; mtl: #chair-m" 
+                position="0 -5.05595 -11.54628" 
+                rotation="0 180 0" 
+                light= "color: #de2612; 
+                        intensity: 1.45; 
+                        type: point">
+
+            <!-- Entity | For the suttle light above the observers head -->
+
+            <a-entity position="-0.32885 11.63805 -2.30736" 
+                    rotation="-84.0087907954667 0 0" 
+                    light= "color: #de2612; 
+                            intensity: 7.45; 
+                            penumbra: 1; 
+                            type: spot">
+            </a-entity>
+
+        </a-entity>
+
+        <!-- ----------------------Below Right Side main Chair--------------------------- -->
+
+        <!-- Entity | For chairs (saled and positioned),lights from below -->
+
+        <a-entity obj-model="obj: #chair-o; mtl: #chair-m" 
+                position="57.20927 -14.21315 -18.11271" 
+                rotation="0 -148.75531347643025 0" 
+                light= "color: #de2612; 
+                        intensity: 1.45; 
+                        type: point">
+
+            <!-- Entity | For the suttle light above the observers head -->
+
+            <a-entity position="-0.32885 11.63805 -2.30736" 
+                    rotation="-84.0087907954667 0 0" 
+                    light= "color: #de2612; 
+                            intensity: 7.45; 
+                            penumbra: 1; 
+                            type: spot">
+            </a-entity>
+
+        </a-entity>
+
+        <!-- ----------------------Below left Side main Chair--------------------------- -->
+
+        <!-- Entity | For chairs (saled and positioned),lights from below -->
+
+        <a-entity obj-model="obj: #chair-o; mtl: #chair-m" 
+                position="-55.95668 -14.21315 -16.47714" 
+                rotation="0 148.75531347643025 0" 
+                light= "color: #de2612; 
+                        intensity: 1.45; 
+                        type: point">
+
+            <!-- Entity | For the suttle light above the observers head -->
+
+            <a-entity position="-0.32885 11.63805 -2.30736" 
+                    rotation="-84.0087907954667 0 0" 
+                    light= "color: #de2612; 
+                            intensity: 7.45; 
+                            penumbra: 1; 
+                            type: spot">
+            </a-entity>
+
+        </a-entity>
+
+        
+        <!-- Entity | Right chairs (saled and positioned),lights from below -->
+
+        <a-entity obj-model="obj: #chair-o; mtl: #chair-m" 
+                position="61.77652 -3 -11.46664" 
+                rotation="0 -150.77728153544692 0">
+
+                    <!-- Entity | For the suttle light above the observers head -->
+
+                    <a-entity position="1.07104 9.7069 -1.62797" 
+                            rotation="-84.0087907954667 0 0" 
+                            light ="color: #de2612; 
+                                    intensity: 0.430; 
+                                    penumbra: 1; 
+                                    type: spot">
+                    </a-entity>
+
+        </a-entity>
+
+
+        <!-- Entity | left chairs (saled and positioned),lights from below -->
+
+        <a-entity obj-model="obj: #chair-o; mtl: #chair-m" 
+                position="-65.39675 -3 -11.46664" 
+                rotation="0 150.46311201621853 0">
+
+                    <!-- Entity | For the suttle light above the observers head -->
+
+                    <a-entity position="1.07104 9.7069 -1.62797" 
+                            rotation="-84.0087907954667 0 0" 
+                            light ="color: #de2612; 
+                                    intensity: 0.430; 
+                                    penumbra: 1; 
+                                    type: spot">
+                    </a-entity>
+
+        </a-entity>
+
+        <!-- Video | To be played in the main screen -->
+
+        <a-video src="#main_video" 
+                width="160" 
+                height="68" 
+                position="-1.51806 20 -78.19335" 
+                material="" >
+
+            <!-- JS controlled play and pause button -->
+
+            <a-image id="videoControls" 
+                    src="#play" 
+                    position="0 -40 0" 
+                    scale="15 10"
+                    play-pause>
+
+        </a-video>
+
+        <!-- Entity | left Doors (saled and positioned) -->
+
+        <a-entity obj-model="obj: #door-o; mtl: #door-m" 
+                position="-210.00534 -41.71344 -85.61932" 
+                rotation="0 90 0" 
+                scale="0.2 0.2 1" 
+                visible="" >
+
+            <a-image id="ex" src="#exit_way" 
+                position="0 152.52737 0" 
+                scale="95 90 14" 
+                play-stop 
+                material="" 
+                geometry="" 
+                rotation="">
+            </a-image>
+
+        </a-entity>
+
+        <!-- Entity | Right Doors (saled and positioned) -->
+
+        <a-entity obj-model="obj: #door-o; mtl: #door-m" 
+                position="210.00534 -41.71344 -85.61932" 
+                rotation="0 -90 0" 
+                scale="0.2 0.2 1" 
+                visible="">
+
+            <a-image id="ex2" src="#exit_way" 
+                position="0 152.52737 0" 
+                scale="95 90 14" 
+                play-stop
+                material="" 
+                geometry="" 
+                rotation="">
+            </a-image>
+
+        </a-entity>
+
+        <a-entity src="assets/floor-1024.jpg"></a-entity>
+
+        <!-- -----------------------------Head 3 Lights------------------------- -->
+        <a-entity id="HeadLights" visible="true">
+                <a-entity light="color: #ff0000; 
+                                intensity: 13.04; type: spot; shadowCameraVisible: false" 
+                        rotation="-90 0 0" 
+                        position="-0.716 22.41111 0">
+                </a-entity>
+                <a-entity light="color: #fffcb3; 
+                                intensity: 13.04; 
+                                type: spot" 
+                        rotation="90 0 0" 
+                        position="-0.716 18.34793 0">
+                </a-entity>
+
+                <!-- ------- -->
+
+                <a-entity light="color: #ff0000; 
+                                type: spot; 
+                                shadowCameraVisible: false; 
+                                intensity: 13.04" 
+                        rotation="-90 0 0" 
+                        position="-10.155 22.47123 0">
+                </a-entity>
+                <a-entity light="color: #fffcb3; 
+                                type: spot; 
+                                intensity: 13.04" 
+                        rotation="90 0 0" 
+                        position="-12.62842 18.12265 0">
+                </a-entity>
+
+                <!-- ------- -->
+
+                <a-entity light="color: #ff0000; 
+                                type: spot; 
+                                shadowCameraVisible: false; 
+                                intensity: 13.04" 
+                        rotation="-90 0 0" 
+                        position="8.131 22.42916 0">
+                </a-entity>
+                <a-entity light="color: #fffcb3; 
+                                type: spot; 
+                                intensity: 13.04" 
+                        rotation="90 0 0" 
+                        position="9.79711 18.21882 0">
+                </a-entity>
+                <!-- ------- -->
+                <!-- Reflective top -->
+                <a-box  color="#000000" 
+                        src="assets/top_material.png" 
+                        width="4" 
+                        height="4" 
+                        depth="4" 
+                        position="2 20.25948 0.6636" 
+                        scale="186.23766 -0.07168 10.48161" 
+                        material="" 
+                        geometry="">
+                </a-box>
+
+        </a-entity>
+
+
+    </a-scene>
+</body>
+
+</html>
